@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="sakilafavicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SakilaDB</title>
+  <a href="http://localhost:3000"><img id="logo" src="sakiladblogo.png"></a>
+  <link rel="stylesheet" href="./src/index.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="dropdown">
+      <button id="dropbtn" class="button">Films
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <p id="listFilms">All Films</p>
+        <p id="createFilms">Create Film</p>
+        <p id="updateFilms">Update Film</p>
+        <p id="deleteFilms">Delete Film</p>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button id="dropbtn" class="button">Actors
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <p id="listActors">All Actors</p>
+        <p id="createActors">Create Actor</p>
+        <p id="updateActors">Update Actor</p>
+        <p id="deleteActors">Delete Actor</p>
+      </div>
+    </div>
+  </div>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+  <div id="root"></div>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+body {
+  background: #121212;
+  color: #FF8B13;
+  font: 14px 'Helvetica', 'Arial', sans-serif;
+}
+
+@font-face{
+  font-family:"shingo";
+  src:url('https://fonts.cdnfonts.com/css/a-otf-shin-go-pro');
+}
+
+a {
+  color: #FF8B13;
+}
+
+#filmForm {
+  display:hidden;
+}
+
+/* #logo{
+  display:block;
+  margin-left: 45%;
+  margin-right: 55%;
+} */
+
+#logo .sticks {
+  /* width:auto;
+  height: 20%; */
+  background-image:url("C:\React\my-app\public\sakilafavicon.png");
+  -webkit-transform: rotateY(180deg);
+  transform: rotate(180deg);
+  display:inline;
+}
+
+.sticks:hover {
+  -webkit-transform: rotateY(180deg);
+  transform: rotate(180deg);
+  transition:0.7s ease-in-out;
+}
+
+/* .sticks::before: {
+  transform: rotate(180deg);
+  transition:0.5s;
+} */
+
+#listitem{
+  font-family: 'shingo', sans-serif;
+  padding:1px;
+  margin:3vh;
+  border-width: 1px;
+  border-radius:3px;
+  border-style:dashed;
+  width:fit-content;
+  height:10vh;
+  text-align:center;
+  display:inline;
+  float:left;
+  
+}
+
+#listitem:hover{
+  background-color: #2b2b2b;
+  transition:0.2s
+}
+
+#logo{
+  height: 13vh;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#myInput {
+  background-image: url('./newsearch.png'); /* Add a search icon to input */
+  background-size: 8%;
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 20vh; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  border-radius:10px;
+  margin-top:12px;
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #121212;
+  font-family: Arial;
+  max-width:fit-content;
+}
+
+/* Links inside the navbar */
+.navbar p {
+  float: left;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  margin:5px;
+  
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #303030;
+  max-width:fit-content;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content p {
+  float: none;
+  font-weight:bold;
+  color: #FF8B13;
+  /* padding: 12px 16px; */
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content p:hover {
+  background-color: #424242;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* CSS */
+button {
+  background-color:#FF8B13;
+  border-radius: 12px;
+  color: #242424;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: fit-content;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 22px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+
+.button:not(:disabled):hover,
+.button:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.button:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
