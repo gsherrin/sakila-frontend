@@ -17,7 +17,7 @@ export class FilmList extends Component {
     // execute the code 
     componentDidMount() {
         fetch(
-            "http://localhost:8080/films")
+            `${apiUrl}/films`)
             .then((res) => res.json())
             .then((json) => {
                 this.setState({
@@ -125,7 +125,7 @@ export class FilmForm extends React.Component {
     handleSubmit(event) {
         let trueReleaseYear = parseInt(this.state.year, 10);
         let trueLength = parseInt(this.state.length, 10);
-        postFilmData("http://localhost:8080/films", {
+        postFilmData(`${apiUrl}/films`, {
             Title: this.state.title,
             Description: this.state.description,
             ReleaseYear: trueReleaseYear,
@@ -225,7 +225,7 @@ export class UpdateFilmForm extends React.Component {
         let trueFilmId = parseInt(this.state.id, 10);
         let trueReleaseYear = parseInt(this.state.year, 10);
         let trueLength = parseInt(this.state.length, 10);
-        updateFilmData("http://localhost:8080/films/", {
+        updateFilmData(`${apiUrl}/films`, {
             FilmId: trueFilmId,
             Title: this.state.title,
             Description: this.state.description,
@@ -329,7 +329,7 @@ export class DeleteFilmForm extends React.Component {
 
     handleSubmit(event) {
         let trueFilmId = parseInt(this.state.id, 10);
-        deleteFilmData("http://localhost:8080/films/" + trueFilmId).then((data) => {
+        deleteFilmData(`${apiUrl}/films` + trueFilmId).then((data) => {
             console.log(data);
             event.preventDefault();
         });
@@ -371,7 +371,7 @@ export class FilmById extends Component {
     // execute the code 
     componentDidMount() {
         fetch(
-            "http://localhost:8080/films")
+            `${apiUrl}/films`)
             .then((res) => res.json())
             .then((json) => {
                 this.setState({

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 import { formatString } from './tools';
+import { apiUrl } from './constants';
 
 // fetch list of actors from database
 export class ActorList extends Component {
@@ -18,7 +19,7 @@ export class ActorList extends Component {
     // execute the code 
     componentDidMount() {
         fetch(
-            "http://localhost:8080/actors")
+            `${apiUrl}/actors`)
             .then((res) => res.json())
             .then((json) => {
                 this.setState({
@@ -122,7 +123,7 @@ export class ActorForm extends React.Component {
     }
 
     handleSubmit(event) {
-        postActorData("http://localhost:8080/actors", {
+        postActorData(`${apiUrl}/actors`, {
             FirstName: this.state.firstname,
             LastName: this.state.lastname,
         }).then((data) => {
@@ -185,7 +186,7 @@ export class UpdateActorForm extends React.Component {
 
     handleSubmit(event) {
         let trueActorId = parseInt(this.state.id, 10);
-        updateActorData("http://localhost:8080/actors", {
+        updateActorData(`${apiUrl}/actors`, {
             ActorId: trueActorId,
             FirstName: this.state.firstname,
             LastName: this.state.lastname,
@@ -256,8 +257,8 @@ export class DeleteActorForm extends React.Component {
     }
 
     handleSubmit(event) {
-        let trueFilmId = parseInt(this.state.id, 10);
-        deleteActorData("http://localhost:8080/films/" + trueFilmId).then((data) => {
+        let trueActorId = parseInt(this.state.id, 10);
+        deleteActorData(`${apiUrl}/actors` + trueActorId).then((data) => {
             console.log(data);
             event.preventDefault();
         });
@@ -266,8 +267,8 @@ export class DeleteActorForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <h1> Delete a Film by its ID: </h1>
-                <label>Film ID (you can find this by looking at all films):
+                <h1> Delete an Actor by their ID: </h1>
+                <label>Actor ID (you can find this by looking at all actors):
                     <input
                         name="id"
                         type="number"
