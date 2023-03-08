@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './index.css';
-import { formatString } from './tools';
 import { apiUrl } from './constants';
 
 // fetch list of actors from database

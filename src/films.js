@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
+import { apiUrl } from './constants';
 
 //fetch films from backend
 export class FilmList extends Component {
