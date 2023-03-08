@@ -17,32 +17,6 @@ a {
   display:hidden;
 }
 
-/* #logo{
-  display:block;
-  margin-left: 45%;
-  margin-right: 55%;
-} */
-
-#logo .sticks {
-  /* width:auto;
-  height: 20%; */
-  background-image:url("C:\React\my-app\public\sakilafavicon.png");
-  -webkit-transform: rotateY(180deg);
-  transform: rotate(180deg);
-  display:inline;
-}
-
-.sticks:hover {
-  -webkit-transform: rotateY(180deg);
-  transform: rotate(180deg);
-  transition:0.7s ease-in-out;
-}
-
-/* .sticks::before: {
-  transform: rotate(180deg);
-  transition:0.5s;
-} */
-
 #listitem{
   font-family: 'shingo', sans-serif;
   padding:1px;
